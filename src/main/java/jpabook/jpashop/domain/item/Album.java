@@ -13,4 +13,11 @@ import javax.persistence.Entity;
 public class Album extends Item {
     private String artist;
     private String etc;
+
+    @Override
+    public void changeItemInfo(String name, int price, int stockQuantity) {
+        this.setName(name);
+        this.setPrice(price);
+        this.setStockQuantity(stockQuantity);
+    }
 }

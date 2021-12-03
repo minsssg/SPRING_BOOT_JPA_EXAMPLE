@@ -14,4 +14,11 @@ import javax.persistence.Entity;
 public class Movie extends Item {
     private String director;
     private String actor;
+
+    @Override
+    public void changeItemInfo(String name, int price, int stockQuantity) {
+        this.setName(name);
+        this.setPrice(price);
+        this.setStockQuantity(stockQuantity);
+    }
 }

@@ -31,8 +31,7 @@ public abstract class Item {
     // == 비즈니스 로직 ==//
 
     /**
-     * 재고 수량을 증가
-     * @param quantity
+     * 재고 수량을 증가\
      */
     public void addStock(int quantity) {
         this.stockQuantity += quantity;
@@ -40,7 +39,6 @@ public abstract class Item {
 
     /**
      * 재고 수량 감소
-     * @param quantity
      */
     public void removeStock(int quantity) {
         int restStock = this.stockQuantity - quantity;
@@ -50,4 +48,6 @@ public abstract class Item {
 
         this.stockQuantity = restStock;
     }
+
+    public abstract void changeItemInfo(String name, int price, int stockQuantity);
 }
